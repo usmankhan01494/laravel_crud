@@ -8,11 +8,11 @@
             <!--begin::Row-->
             <div class="row">
                 <div class="col-sm-6">
-                    <h3 class="mb-0">About Us</h3>
+                    <h3 class="mb-0">OUR BANNER</h3>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-end">
-                        <a href="{{ route('admin.about.create') }}" class="btn btn-primary">Add About</a>
+                        <a href="{{ route('admin.testimonial.create') }}" class="btn btn-primary">Add Banner</a>
                     </ol>
                 </div>
             </div>
@@ -30,38 +30,38 @@
                                     <tr>
                                         <th style="width: 10px">#</th>
                                         <th>Image</th>
-                                        <th>About Tittle</th>
-                                        <th>Short Description</th>
-                                        <th>Description</th>
+                                        <th>Nmae</th>
+                                        <th>Position</th>
+                                        <th>Message</th>
                                         <th>Status</th>
                                         <th style="width: 100px">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($abouts as $about)
+                                    @foreach ($testimonial as $testimon)
                                     <tr class="align-middle">
-                                        <td>{{ $about->id }}</td>
+                                        <td>{{ $testimon->id }}</td>
                                         <td>
-                                            @if($about->image)
-                                                <img src="{{ asset('uploads/about/' . $about->image) }}" alt="About Image" width="60">
+                                            @if($testimon->image)
+                                                <img src="{{ asset('uploads/testimonials/' . $testimon->image) }}" alt="testimon Image" width="60">
                                             @else
                                                 <span class="text-muted">No image</span>
                                             @endif
                                         </td>
-                                        <td>{{ $about->title }}</td>
-                                        <td>{{ $about->short_description }}</td>
-                                        <td>{{ $about->description }}</td>
+                                        <td>{{ $testimon->name }}</td>
+                                        <td>{{ $testimon->position }}</td>
+                                        <td>{{ $testimon->message }}</td>
                                         <td>
-                                            @if($about->status == 1)
+                                            @if($testimon->status == 1)
                                                 <span class="badge bg-success">Active</span>
                                             @else
                                                 <span class="badge bg-danger">Inactive</span>
                                             @endif
                                         </td>
                                         <td class="d-flex "style="gap:5px;" >
-                                            <a href="{{ route('admin.about.edit', $about->id) }}" class="btn btn-sm btn-warning">Edit</a>
+                                            <a href="{{ route('admin.testimonial.edit', $testimon->id) }}" class="btn btn-sm btn-warning">Edit</a>
 
-                                            <form action="{{ route('admin.about.destroy', $about->id) }}" 
+                                            <form action="{{ route('admin.testimonial.destroy', $testimon->id) }}" 
                                                   method="POST" style="display:inline;">
                                                 @csrf
                                                 @method('DELETE')
@@ -77,9 +77,9 @@
                                 </tbody>
                             </table>
 
-                            @if ($abouts->isEmpty())
+                            @if ($testimonial->isEmpty())
                                 <div class="text-center p-3">
-                                    <em>No Abouts found.</em>
+                                    <em>No Banner found.</em>
                                 </div>
                             @endif
                         </div>

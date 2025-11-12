@@ -8,6 +8,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\admin\loginController as AdminloginController; // ✅ Added AdminloginController import
 use App\Http\Controllers\admin\dashboardController as AdmindashboardController; // ✅ Added AdmindashboardController import
 use App\Http\Controllers\bannerController; // ✅ Added bannerController import
+use App\Http\Controllers\testimonialController; // ✅ Added testimonialController import
 
 use App\Http\Controllers\aboutController; // ✅ Added aboutController import
 
@@ -79,3 +80,15 @@ Route::get('admin/about/create', [AboutController::class, 'create'])->name('admi
 Route::get('admin/about/{id}/edit', [AboutController::class, 'edit'])->name('admin.about.edit');
 Route::put('admin/about/{id}', [AboutController::class, 'update'])->name('admin.about.update');
 Route::delete('admin/about/{id}', [AboutController::class, 'destroy'])->name('admin.about.destroy');
+
+
+
+//Testimonial Routes
+//Route::resource('testimonials',testimonialController::class);
+
+Route::get('admin/testimonial', [testimonialController::class, 'index'])->name('admin.testimonial.index');
+Route::post('admin/testimonial', [testimonialController::class, 'store'])->name('admin.testimonial.store');
+Route::get('admin/testimonial/create', [testimonialController::class, 'create'])->name('admin.testimonial.create');
+Route::get('admin/testimonial/{id}/edit', [testimonialController::class, 'edit'])->name('admin.testimonial.edit');
+Route::put('admin/testimonial/{id}', [testimonialController::class, 'update'])->name('admin.testimonial.update');
+Route::delete('admin/testimonial/{id}', [testimonialController::class, 'destroy'])->name('admin.testimonial.destroy');
