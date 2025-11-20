@@ -28,6 +28,15 @@ class CategoryController extends Controller
         return view('admin.category.create');
     }
 
+
+
+    // show for this category url 
+    public function show($slug)
+    {
+    $category = Category::where('slug', $slug)->firstOrFail();
+    return view('frontend.category', compact('category'));
+    }
+
     /**
      * Store a newly created resource in storage.
      */

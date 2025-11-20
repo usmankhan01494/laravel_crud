@@ -92,10 +92,7 @@
                   <button type="submit" name="login" class="btn btn-primary">Sign In</button>
                 </div>
               </div>
-               <div class="gap-4">
-                  <a href="{{ route('user.register') }}" class="link-secondary text-decoration-none">Create a new Account</a>
-                  
-                </div>
+               
               <!-- /.col -->
             </div>
             <!--end::Row-->

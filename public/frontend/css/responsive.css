@@ -1,0 +1,177 @@
+
+
+
+@media(max-width:768px){
+
+
+    .request-quote{
+        margin-top: 0px !important;
+    }
+
+    .about-image img{
+        height: 250px !important;
+        margin-right: 0;
+    }
+
+    .about-content{
+        margin-left: 0;
+    }
+
+    .banner-content{
+        position: absolute;
+        top: 50%;
+        left: 45%;
+        transform: translate(-50%, -50%);
+        color: #000000;
+        text-align: start;
+        width: 80%;
+    }
+
+    .main-banner .item img{
+        height: 300px !important;
+    }
+    .form-group{
+        width: 100%;
+        
+    }
+    .about-section{
+        padding: 30px 0;
+    }
+    .services-section{
+        padding: 30px 0;
+    }
+    .service-box{
+        margin-bottom: 30px;
+        margin-right: 0;
+    }
+    .skills-section{
+        padding: 0;
+    }
+    .skills-image{
+        margin-left: 0;
+    }
+    .testimonial-section{
+        padding: 30px 0;
+    }
+    
+    .profile-pic {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    border: 3px solid #fff;
+    outline: 2px solid red;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    }
+
+    .testimon-box{
+        margin: 0;
+    }
+    .testimon{
+        margin: 0;
+    }
+
+    .owl-dots{display: none;}
+
+    .blog-section{
+        padding: 0;
+    }
+    .blog-box{
+        margin-bottom: 30px;
+        margin-right: 0;
+    }
+    .contact-section{
+        padding: 30px 0;
+    }
+    .contact-image{
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    .div i{
+        font-size: 30px;
+    }
+    .letsget-section{
+        padding: 30px 0;
+    }
+
+    .about-banner-section{
+        padding: 100px 0;
+    }
+    .emergency-image{margin-right: 0;}
+
+
+
+}
+
+@media (max-width: 1200px) { 
+    .form-group{
+        max-width: 247px !important;
+    }
+
+
+}
+
+
+
+@media(max-width:980px){
+    .mobile-none{
+        display: none !important;
+    }
+    .new-mobile-menu{
+        display: block !important;
+    }
+    .logo img{
+        width: 150px;
+        
+    }
+
+    .about-image img{
+        height: 450px !important;
+    }
+    .banner-content{
+        top: 35%;
+    }
+    .form-group{
+       min-width: 170px !important;
+    }
+    .about-image{
+        margin-bottom: 30px;
+        margin-right: 30px;
+    }
+    .service-box{
+        margin-right: 30px;
+        margin-top: 30px;
+    }
+
+    .owl-dots{display: none;}
+    .contact-box{
+        margin: 7px;
+        padding: 15px;
+    }
+
+}
+
+@media(max-width:1080px){
+    .about-image{
+        margin-bottom: 30px;
+        margin-right: 30px;
+    }
+}
+
+
+
+@media(max-width:480px){
+    .banner-content{
+        top: 50%;
+        left: 50%;
+    }
+    .about-image{
+        margin-bottom: 30px;
+        margin-right: 0;
+        }
+        .service-box{
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
+}

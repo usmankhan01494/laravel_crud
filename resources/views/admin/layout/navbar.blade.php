@@ -9,6 +9,7 @@
       </li>
       <li class="nav-item d-none d-md-block"><a href="#" class="nav-link">Home</a></li>
       <li class="nav-item d-none d-md-block"><a href="#" class="nav-link">Contact</a></li>
+      <li class="nav-item d-none d-md-block"><a href="{{ route('admin.logout') }}" class="nav-link">Logout</a></li>
     </ul>
 
     <ul class="navbar-nav ms-auto">

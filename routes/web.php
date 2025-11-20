@@ -9,11 +9,19 @@ use App\Http\Controllers\admin\loginController as AdminloginController; // ✅ A
 use App\Http\Controllers\admin\dashboardController as AdmindashboardController; // ✅ Added AdmindashboardController import
 use App\Http\Controllers\bannerController; // ✅ Added bannerController import
 use App\Http\Controllers\testimonialController; // ✅ Added testimonialController import
+use App\Http\Controllers\serviceController;  //Added ServiceController import
+use App\Http\Controllers\frontend\aboutController as frontendAboutController;
+use App\Http\Controllers\frontend\serviceController as frontendServiceController;
+use App\Http\Controllers\frontend\blogController as frontendBlogController;
+use App\Http\Controllers\frontend\contactController as frontendContantController;
+use App\Http\Controllers\blogController;
+use App\Http\Controllers\FormController;
 
 use App\Http\Controllers\aboutController; // ✅ Added aboutController import
 
 use App\Http\Controllers\CategoryController; // ✅ Added CategoryController import
-
+use App\Http\Controllers\HomeController;
+use Illuminate\Support\Facades\App;
 
 Route::get('/', function () {
     return view('welcome');
@@ -92,3 +100,39 @@ Route::get('admin/testimonial/create', [testimonialController::class, 'create'])
 Route::get('admin/testimonial/{id}/edit', [testimonialController::class, 'edit'])->name('admin.testimonial.edit');
 Route::put('admin/testimonial/{id}', [testimonialController::class, 'update'])->name('admin.testimonial.update');
 Route::delete('admin/testimonial/{id}', [testimonialController::class, 'destroy'])->name('admin.testimonial.destroy');
+
+
+// Service Routes
+Route::get('admin/service/',[serviceController::class, 'index'])->name('admin.service.index');
+Route::post('admin/service',[serviceController::class, 'store'])->name('admin.service.store');
+Route::get('admin/service/create',[serviceController::class, 'create'])->name('admin.service.create');
+Route::get('admin/service/{id}/edit', [serviceController::class, 'edit'])->name('admin.service.edit');
+Route::put('admin/service/{id}',[serviceController::class, 'update'])->name('admin.service.update');
+Route::delete('admin/service/{id}', [serviceController::class, 'destroy'])->name('admin.service.destroy');
+
+//blog Routes 
+Route::get('admin/blog/',[blogController::class, 'index'])->name('admin.blog.index');
+Route::post('admin/blog',[blogController::class, 'store'])->name('admin.blog.store');
+Route::get('admin/blog/create',[blogController::class, 'create'])->name('admin.blog.create');
+Route::get('admin/blog/{id}/edit', [blogController::class, 'edit'])->name('admin.blog.edit');
+Route::put('admin/blog/{id}',[blogController::class, 'update'])->name('admin.blog.update');
+Route::delete('admin/blog/{id}', [blogController::class, 'destroy'])->name('admin.blog.destroy');
+
+
+
+//Frontend Home Route
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('about',[frontendAboutController::class,'index'])->name('about');
+Route::get('service',[frontendServiceController::class, 'index'])->name('service');
+Route::get('blog',[frontendBlogController::class,'index'])->name('blog');
+Route::get('contect',[frontendContantController::class, 'index'])->name('contect');
+
+
+//category url 
+Route::get('/category/{slug}', [CategoryController::class, 'show'])->name('category.page');
+
+
+
+//form data save
+Route::post('/', [FormController::class, 'save'])->name('form.save');
+
