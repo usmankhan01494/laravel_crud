@@ -80,14 +80,26 @@
 
 						<input type="text" name="name" class="name-input form-input1" placeholder="Your Name">
 						<span class="name-error error-msg"></span>
+                        @error('name')
+							<span style="color:red">{{ $message }}</span>
+						@enderror
 
 						<input type="text" name="phone" class="number-input form-input1" placeholder="Phone Number">
 						<span class="number-error error-msg"></span>
+                        @error('phone')
+							<span style="color:red">{{ $message }}</span>
+						@enderror
 
 						<input type="email" name="email" class="email-input form-input1" placeholder="Your Email">
 						<span class="email-error error-msg"></span>
+                        @error('email')
+							<span style="color:red">{{ $message }}</span>
+						@enderror
 
 						<textarea class="form-input1" name="service" placeholder="Your Message"></textarea>
+                        @error('service')
+							<span style="color:red">{{ $message }}</span>
+						@enderror
 
 						<button class="button" type="submit">Send Message</button>
 					</form>

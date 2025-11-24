@@ -45,25 +45,40 @@
 					<div class="form-group">
 						<input type="text" class="name-input form-input" name="name" placeholder="Your Name">
 						<span class="name-error error-msg"></span>
+						@error('name')
+							<span style="color:red">{{ $message }}</span>
+						@enderror
 					</div>
 
 					<div class="form-group">
 						<input type="email" class="email-input form-input" name="email" placeholder="Your Email">
 						<span class="email-error error-msg"></span>
+						@error('email')
+							<span style="color:red">{{ $message }}</span>
+						@enderror
 					</div>
 
 					<div class="form-group">
 						<input type="text" class="number-input form-input" name="phone" placeholder="Phone Number">
 						<span class="number-error error-msg"></span>
+						@error('phone')
+							<span style="color:red">{{ $message }}</span>
+						@enderror
 					</div>
 
 					<div class="form-group">
 						<input type="date" name="date" class="form-input">
+						@error('date')
+							<span style="color:red">{{ $message }}</span>
+						@enderror
 					</div>
 
 					<div class="form-group">
 						<input type="text" name="service" class="service-input form-input" placeholder="Service Required">
 						<span class="service-error error-msg"></span>
+						@error('service')
+							<span style="color:red">{{ $message }}</span>
+						@enderror
 					</div>
 
 
@@ -322,14 +337,26 @@
 
 						<input type="text" name="name" class="name-input form-input1" placeholder="Your Name">
 						<span class="name-error error-msg"></span>
+						@error('name')
+							<span style="color:red">{{ $message }}</span>
+						@enderror
 
 						<input type="text" name="phone" class="number-input form-input1" placeholder="Phone Number">
 						<span class="number-error error-msg"></span>
+						@error('phone')
+							<span style="color:red">{{ $message }}</span>
+						@enderror
 
 						<input type="email" name="email" class="email-input form-input1" placeholder="Your Email">
 						<span class="email-error error-msg"></span>
+						@error('email')
+							<span style="color:red">{{ $message }}</span>
+						@enderror
 
 						<textarea class="form-input1" name="service" placeholder="Your Message"></textarea>
+						@error('service')
+							<span style="color:red">{{ $message }}</span>
+						@enderror
 
 						<button class="button" type="submit">Send Message</button>
 					</form>

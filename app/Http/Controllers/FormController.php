@@ -10,18 +10,27 @@ class FormController extends Controller
     //
 
 
-   public function save(Request $request)
+  public function save(Request $request)
 {
+    $request->validate([
+        'name'    => 'required',
+        'email'   => 'required|email',
+        'phone'   => 'required',
+        'service' => 'required',
+        'date'    => 'nullable|date',
+    ]);
+
     UserForm::create([
         'name' => $request->name,
         'email' => $request->email,
         'phone' => $request->phone,
-        'date' => $request->date ?? null, // ❗ empty ho to NULL save hoga
+        'date' => $request->date,
         'service' => $request->service,
     ]);
 
     return back()->with('success', 'Data saved successfully!');
 }
+
 
     
 
