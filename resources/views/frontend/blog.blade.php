@@ -44,7 +44,7 @@
 					<div class="blog-content">
 						<h3><a href="#">{{ $blog->title }}</a></h3>
 						<p>{{ $blog->description }}</p>
-						<a href="blog.html">Read More</a>
+						<a href="#">Read More</a>
 					</div>
 				</div>
 			</div>

@@ -138,7 +138,7 @@
 					<div class="service-content">
 						<h3>{{ $service->title }}</h3>
 						<p>{{ $service->description }}</p>
-						<a href="service.html">Read More</a>
+						<a href="#">Read More</a>
 					</div>
 				</div>
 			</div>
